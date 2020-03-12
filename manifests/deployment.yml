@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: bluedtpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bluedtpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bluedtpipelinesjavascriptdocker 
+          image: unicontainerreg.azurecr.io/bluedtpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
